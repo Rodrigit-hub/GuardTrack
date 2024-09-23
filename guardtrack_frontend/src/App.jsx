@@ -14,6 +14,7 @@ function App() {
       <Route path='/' element={<Navigate/>}/>
       <Route path='/empresas' element={<EmpresaPage/>}/>
       <Route path='/crear-empresa' element={<EmpresaFormPage/>}/>
+      <Route path='/empresas/:id' element={<EmpresaFormPage/>}/>
     </Routes>
     </BrowserRouter>
   );
