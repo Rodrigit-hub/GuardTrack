@@ -1,5 +1,6 @@
-import { useForm } from "react-hook-form";
-import { createEmpresa, deleteEmpresa } from "../api/empresas.api";
+import { get, useForm } from "react-hook-form";
+import { useEffect } from "react";
+import { createEmpresa, deleteEmpresa, updateEmpresa, getEmpresa } from "../api/empresas.api";
 import { useNavigate, useParams } from "react-router-dom";
 
 export function EmpresaFormPage() {
@@ -7,15 +8,34 @@ export function EmpresaFormPage() {
     register,
     handleSubmit,
     formState: { errors },
+    setValue
+    
   } = useForm();
 
   const navigate = useNavigate();
   const params = useParams();
 
   const onSubmit = handleSubmit(async (data) => {
-    const res = await createEmpresa(data);
-    navigate("/empresas");
+    if (params.id) {
+      //actualizando
+      await updateEmpresa(params.id, data);
+    } else {
+    await createEmpresa(data);
+  }
+  navigate("/empresas");
   });
+
+  useEffect (()=>{
+    async function loadEmpresas() {
+      if (params.id) {
+        const {data: {nombre, direccion}} = await getEmpresa(params.id)  
+        setValue('nombre', nombre)
+        setValue('direccion', direccion)
+        //setValue('') Otros atributos
+      }
+    }
+    loadEmpresas()
+  }, [])
 
   return (
     <div>
