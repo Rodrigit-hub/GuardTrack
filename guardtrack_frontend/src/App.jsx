@@ -3,7 +3,6 @@ import { EmpresaPage } from '../pages/EmpresaPage';
 import { EmpresaFormPage } from '../pages/EmpresaFormPage';
 import { Navigation } from '../components/Navigation';
 
-
 function App() {
   return (
     <BrowserRouter>

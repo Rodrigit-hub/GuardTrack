@@ -1,5 +1,6 @@
 import {useNavigate} from "react-router-dom"
 
+
 export function EmpresaCard({empresa}) {
 
   const navigate = useNavigate()
@@ -17,6 +18,7 @@ export function EmpresaCard({empresa}) {
         <h1>{empresa.nombre}</h1>
         <p>{empresa.direccion}</p>
         <hr/>
+        
     </div>
   )
 }
