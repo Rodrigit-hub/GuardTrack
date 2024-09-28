@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import { getAllEmpresas } from "../api/empresas.api";
-import {EmpresaCard} from "./EmpresaCard";
+import { EmpresaCard } from "./EmpresaCard";
 
 
 export function EmpresaList() {
@@ -16,7 +16,7 @@ export function EmpresaList() {
       
     }, []);
 
-  return <div>
+  return <div className="grid grid-cols-4 gap-4"> 
       {empresas.map(empresa => (
         <EmpresaCard key={empresa.id} empresa={empresa} />
       ))}

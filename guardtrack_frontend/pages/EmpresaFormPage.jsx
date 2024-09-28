@@ -2,7 +2,7 @@ import { get, useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { createEmpresa, deleteEmpresa, updateEmpresa, getEmpresa } from "../api/empresas.api";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { toast } from "react-hot-toast"
 export function EmpresaFormPage() {
   const {
     register,
@@ -19,8 +19,10 @@ export function EmpresaFormPage() {
     if (params.id) {
       //actualizando
       await updateEmpresa(params.id, data);
+      toast.success("Empresa actualizada")
     } else {
     await createEmpresa(data);
+    toast.success("Empresa creada")
   }
   navigate("/empresas");
   });
@@ -64,8 +66,9 @@ export function EmpresaFormPage() {
             const accepted = window.confirm("Are you sure?");
             if (accepted) {
               await deleteEmpresa(params.id);
-              navigate("/empresas");
+              toast.success("Empresa eliminada")
             }
+            navigate("/empresas");
           }}
         >
           DELETE
