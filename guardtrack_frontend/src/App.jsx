@@ -3,7 +3,7 @@ import { EmpresaPage } from '../pages/EmpresaPage';
 import { EmpresaFormPage } from '../pages/EmpresaFormPage';
 import { Navigation } from '../components/Navigation';
 import { Toaster } from "react-hot-toast";
-
+  
 
 function App() {
   return (

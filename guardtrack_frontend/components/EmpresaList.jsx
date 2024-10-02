@@ -16,10 +16,12 @@ export function EmpresaList() {
       
     }, []);
 
-  return <div className="grid grid-cols-4 gap-4"> 
+  return (<div class="grid grid-cols-3 gap-3"> 
+    
       {empresas.map(empresa => (
         <EmpresaCard key={empresa.id} empresa={empresa} />
       ))}
+    
     </div>
-  
+  )
 }
