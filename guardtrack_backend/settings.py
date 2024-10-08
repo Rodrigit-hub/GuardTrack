@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,13 +83,20 @@ WSGI_APPLICATION = 'guardtrack_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# postgresql://rodrigo:cEgfdgEoxpwLChRhyAMvl2cLipgx1b7l@dpg-cruofl3gbbvc73corci0-a.oregon-postgres.render.com/guardtrack
+
 DATABASES = {
+    
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'Guardtrack',
+        'USER': 'rodrigo',
+        'PASSWORD' : 'cEgfdgEoxpwLChRhyAMvl2cLipgx1b7l',
+        'HOST' : 'dpg-cruofl3gbbvc73corci0-a',
+        'PORT' : '5432'
     }
 }
-
+DATABASES["default"] = dj_database_url.parse("postgresql://rodrigo:cEgfdgEoxpwLChRhyAMvl2cLipgx1b7l@dpg-cruofl3gbbvc73corci0-a.oregon-postgres.render.com/guardtrack")
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

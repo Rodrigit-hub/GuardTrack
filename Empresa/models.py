@@ -9,6 +9,6 @@ class Empresa(models.Model):
     contacto = models.CharField(max_length=100, default='', editable=True)
     descripcion = models.TextField(blank=True)
     activo = models.BooleanField()
-
-    # def __str__(self):
-    #    return self.nombre
+    
+    def __str__(self):
+        return self.nombre
