@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const empresaApi = axios.create({
-    baseURL:'http://localhost:8000/empresa/api/v1/empresa'
+    baseURL:'http://localhost:8000/empresa/empresa_api/empresa'
 })
 
 //Forma abreviada de funcion, al ser simple no necesita return

@@ -12,9 +12,6 @@ router.register(r"novedad", views.NovedadView, 'novedad')
 
 
 urlpatterns = [
-    #path("tiponovedad/", include(router.urls)),
-    #path("ubicacion/", include(router.urls)),
-    #path("objetivo/", include(router.urls)),
     path("guardias_api/", include(router.urls)),
     path("docs/", include_docs_urls(title="Guardias API"))
 ]
