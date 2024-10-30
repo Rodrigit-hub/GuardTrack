@@ -16,7 +16,7 @@ export function EmpresaCard({empresa}) {
       >
 
         <h1 className="font-bold uppercase">{empresa.titular}</h1>
-        <p className="text-slate-400">{empresa.cuit}</p>
+        <p className="text-slate-400">{empresa.razonSocial}</p>
         
         
     </div>

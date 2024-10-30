@@ -11,4 +11,4 @@ class Empresa(models.Model):
     activo = models.BooleanField()
     
     def __str__(self):
-        return self.nombre
+        return self.titular

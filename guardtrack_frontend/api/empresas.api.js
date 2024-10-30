@@ -2,7 +2,14 @@ import axios from "axios"
 
 const empresaApi = axios.create({
     baseURL:'http://localhost:8000/empresa/api/v1/empresa'
+    /*
+    headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+    }
+    */
+   
 })
+
 
 //Forma abreviada de funcion, al ser simple no necesita return
 export const getAllEmpresas = () => empresaApi.get('/'); 

@@ -15,6 +15,7 @@ function App() {
           <Route path='/empresas' element={<EmpresaPage />} />
           <Route path='/crear-empresa' element={<EmpresaFormPage />} />
           <Route path='/empresas/:id' element={<EmpresaFormPage />} />
+
         </Routes>
         <Toaster />
       </div>
