@@ -7,7 +7,7 @@ const tiponovedadApi = axios.create({
 //Forma abreviada de funcion, al ser simple no necesita return
 export const getAllTipoNovedades = () => tiponovedadApi.get('/'); 
 
-export const getTipoNovedades = (id) => tiponovedadApi.get(`/${id}/`)
+export const getTipoNovedad = (id) => tiponovedadApi.get(`/${id}/`)
 
 //Forma no abreviada de funcion
 export const createTipoNovedad = (tipoNovedad) => {

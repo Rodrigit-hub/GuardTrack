@@ -1,25 +1,25 @@
 import {useEffect, useState} from "react";
-import { getAllEmpresas } from "../api/empresas.api";
-import { EmpresaCard } from "./EmpresaCard";
+import { getAllNovedades } from "../api/novedad.api.js";
+import { NovedadCard } from "./NovedadCard";
 
 
-export function EmpresaList() {
+export function NovedadList() {
     
-    const [empresas, setEmpresas] = useState([]);
+    const [novedad, setNovedad] = useState([]);
     
     useEffect(() => {
-        async function loadEmpresas(){
-            const res = await getAllEmpresas();
-            setEmpresas(res.data);
+        async function loadNovedades(){
+            const res = await getAllNovedades();
+            setNovedades(res.data);
         }
-        loadEmpresas();
+        loadNovedades();
       
     }, []);
 
   return (<div class="grid grid-cols-3 gap-3"> 
     
-      {empresas.map(empresa => (
-        <EmpresaCard key={empresa.id} empresa={empresa} />
+      {novedad.map(novedad => (
+        <NovedadCard key={Novedad.id} novedad={novedad} />
       ))}
     
     </div>

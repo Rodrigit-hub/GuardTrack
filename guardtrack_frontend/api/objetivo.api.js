@@ -7,11 +7,11 @@ const objetivoApi = axios.create({
 //Forma abreviada de funcion, al ser simple no necesita return
 export const getAllObjetivos = () => objetivoApi.get('/'); 
 
-export const getObjetivoss = (id) => objetivoApi.get(`/${id}/`)
+export const getObjetivo = (id) => objetivoApi.get(`/${id}/`)
 
 //Forma no abreviada de funcion
-export const createUbjetivo = (objetivo) => {
-    return ubicacionApi.post('/', ubicacion)
+export const createObjetivo = (objetivo) => {
+    return objetivoApi.post('/', objetivo)
 }
 
 export const deleteObjetivo = (id) =>

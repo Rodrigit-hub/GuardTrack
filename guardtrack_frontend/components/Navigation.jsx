@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export function Navigation() {
 
-  #Navegacion Empresas
+  //Navegacion Empresas
   return (
     <div className="flex justify-between py-3">
       <Link to="/empresas">
@@ -16,7 +16,7 @@ export function Navigation() {
     </div>
   )
 
-  #Navegacion Tipo Novedad
+  //Navegacion Tipo Novedad
   return (
     <div className="flex justify-between py-3">
       <Link to="/tiponovedad">
@@ -29,7 +29,7 @@ export function Navigation() {
     </div>
   )    
 
-  #Navegacion Ubicacion
+  //Navegacion Ubicacion
   return (
     <div className="flex justify-between py-3">
       <Link to="/ubicacion">
@@ -42,7 +42,7 @@ export function Navigation() {
     </div>
   )
 
-  #Navegacion Objetivo
+  //Navegacion Objetivo
   return (
     <div className="flex justify-between py-3">
       <Link to="/objetivo">
@@ -55,7 +55,7 @@ export function Navigation() {
     </div>
   )
   
-  #Navegacion Novedad
+  //Navegacion Novedad
   return (
     <div className="flex justify-between py-3">
       <Link to="/novedad">

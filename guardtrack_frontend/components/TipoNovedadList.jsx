@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { getAllTipo } from "../api/tiponovedad.api";
+import { getAllTipoNovedades } from "../api/tiponovedad.api";
 import { TipoNovedadCard } from "./TipoNovedadCard";
 
 

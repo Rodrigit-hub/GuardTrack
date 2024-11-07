@@ -1,6 +1,6 @@
-import { EmpresaList } from "../components/EmpresaList"
+import { ObjetivoList } from "../components/ObjetivoList.jsx"
 
 
-export function EmpresaPage() {
-  return <EmpresaList/>
+export function ObjetivoPage() {
+  return <ObjetivoList/>
 }

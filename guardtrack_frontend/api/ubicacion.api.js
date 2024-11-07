@@ -5,9 +5,9 @@ const ubicacionApi = axios.create({
 })
 
 //Forma abreviada de funcion, al ser simple no necesita return
-export const getAllUbicaciones = () => ubicacionApi.get('/'); 
+export const getAllUbicacion = () => ubicacionApi.get('/'); 
 
-export const getUbicaciones = (id) => ubicacionApi.get(`/${id}/`)
+export const getUbicacion = (id) => ubicacionApi.get(`/${id}/`)
 
 //Forma no abreviada de funcion
 export const createUbicacion = (ubicacion) => {
@@ -17,7 +17,6 @@ export const createUbicacion = (ubicacion) => {
 export const deleteUbicacion = (id) =>
   ubicacionApi.delete(`/${id}/`)
 
-export const updateUbicacion = (id, ubicacion) => 
-  ubicacionApi.put(`/${id}/`, ubicacion);
+export const updateUbicacion = (id, ubicacion) => ubicacionApi.put(`/${id}/`, ubicacion);
 
 

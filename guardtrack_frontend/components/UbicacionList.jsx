@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-import { getAllUbicaiones } from "../api/ubicacion.api";
-import { EmpresaCard } from "./UbicacionCard.jsx";
+import { UbicacionCard } from "./UbicacionCard.jsx";
+import { getAllUbicacion } from "../api/ubicacion.api.js";
 
 
 export function UbicacionList() {
@@ -9,7 +9,7 @@ export function UbicacionList() {
     
     useEffect(() => {
         async function loadUbicacion(){
-            const res = await getAllUbicaiones();
+            const res = await getAllUbicacion();
             setUbicacion(res.data);
         }
         loadUbicacion();
